@@ -1,0 +1,8 @@
+bases:
+- ../../../manager_master
+
+namespace: wazuh
+
+patches:
+- wazuh-api-svc.yaml
+- wazuh-manager-svc.yaml

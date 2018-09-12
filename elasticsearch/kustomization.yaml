@@ -1,0 +1,4 @@
+resources:
+- elasticsearch-sts-svc.yaml
+- elasticsearch-sts.yaml
+- elasticsearch-svc.yaml

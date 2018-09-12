@@ -1,0 +1,4 @@
+resources:
+- wazuh-manager-client-conf.yaml
+- wazuh-manager-client-sts-svc.yaml
+- wazuh-manager-client-sts.yaml

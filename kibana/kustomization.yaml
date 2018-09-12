@@ -1,0 +1,5 @@
+resources:
+- kibana-deploy.yaml
+- kibana-svc.yaml
+- nginx-deploy.yaml
+- nginx-svc.yaml

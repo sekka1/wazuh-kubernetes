@@ -1,0 +1,3 @@
+resources:
+- wazuh-ns.yaml
+- aws-gp2-storage-class.yaml

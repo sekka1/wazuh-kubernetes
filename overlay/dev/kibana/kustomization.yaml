@@ -1,0 +1,7 @@
+bases:
+- ../../../kibana
+
+namespace: wazuh
+
+patches:
+- nginx-svc.yaml

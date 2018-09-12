@@ -1,0 +1,6 @@
+resources:
+- wazuh-api-svc.yaml
+- wazuh-manager-master-conf.yaml
+- wazuh-manager-master-sts-svc.yaml
+- wazuh-manager-master-sts.yaml
+- wazuh-manager-svc.yaml

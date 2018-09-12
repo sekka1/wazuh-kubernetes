@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta2
+kind: StatefulSet
+metadata:
+  name: wazuh-elasticsearch
+spec:
+  selector:
+    matchLabels:
+      app: wazuh-elasticsearch
+  volumeClaimTemplates:
+    - metadata:
+        name: wazuh-elasticsearch
+        namespace: wazuh
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        storageClassName: gp2-encrypted-retained
+        resources:
+          requests:
+            storage: 30Gi
