@@ -46,6 +46,8 @@ data:
         <connection>secure</connection>
         <port>1514</port>
         <protocol>tcp</protocol>
+        <allowed-ips>100.0.0.0/8</allowed-ips>
+        <allowed-ips>10.0.0.0/8</allowed-ips>
       </remote>
 
       <!-- Policy monitoring -->

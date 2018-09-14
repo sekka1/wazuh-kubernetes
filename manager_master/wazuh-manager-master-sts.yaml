@@ -25,6 +25,7 @@ spec:
         wazuh-manager-role: master
       name: wazuh-manager-master
     spec:
+      #hostNetwork: true
       volumes:
         - name: config
           configMap:
@@ -50,6 +51,7 @@ spec:
               mountPath: /etc/postfix
           ports:
             - containerPort: 1514
+              protocol: TCP
             - containerPort: 1515
             - containerPort: 1516
             - containerPort: 55000
