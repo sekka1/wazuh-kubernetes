@@ -1,0 +1,3 @@
+resources:
+- configmap-ossec-conf.yaml
+- daemonset.yaml
