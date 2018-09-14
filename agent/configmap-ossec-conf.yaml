@@ -92,12 +92,12 @@ data:
         <scan_on_start>yes</scan_on_start>
 
         <!-- Directories to check  (perform all possible verifications) -->
-        <directories check_all="yes">/etc,/usr/bin,/usr/sbin</directories>
-        <directories check_all="yes">/bin,/sbin,/boot</directories>
+        <directories check_all="yes" realtime="yes" report_changes="yes">/etc,/usr/bin,/usr/sbin</directories>
+        <directories check_all="yes" realtime="yes" report_changes="yes">/bin,/sbin,/boot</directories>
 
         <!-- Directories to check in the mounted path from the docker container  (perform all possible verifications) -->
-        <directories check_all="yes">/opt/hostexport/etc,/opt/hostexport/usr/bin,/opt/hostexport/usr/sbin</directories>
-        <directories check_all="yes">/opt/hostexport/bin,/opt/hostexport/sbin,/opt/hostexport/boot</directories>
+        <directories check_all="yes" realtime="yes" report_changes="yes">/opt/hostexport/etc,/opt/hostexport/usr/bin,/opt/hostexport/usr/sbin</directories>
+        <directories check_all="yes" realtime="yes" report_changes="yes">/opt/hostexport/bin,/opt/hostexport/sbin,/opt/hostexport/boot</directories>
 
         <alert_new_files>yes</alert_new_files>
 
