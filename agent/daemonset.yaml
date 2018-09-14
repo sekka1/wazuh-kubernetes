@@ -21,25 +21,19 @@ spec:
         imagePullPolicy: Always
         command: ["/bin/bash"]
         args: ["-c",
-                "/var/ossec/bin/agent-auth -m wazuh-manager -p 1515; /var/ossec/bin/ossec-control start; tail -f /var/ossec/logs/*.log;"
+                "/var/ossec/bin/agent-auth -m wazuh-manager -p 1515; cp /opt/ossec-conf/ossec.conf /var/ossec/etc/ossec.conf; /var/ossec/bin/ossec-control start; tail -f /var/ossec/logs/*.log;"
                 ]
-        # env:
-        #   - name: GRAVITEE_MANAGEMENT_MONGODB_URI
-        #     value: "mongodb://mongodb-gravitee:27017/gravitee?serverSelectionTimeoutMS=5000&connectTimeoutMS=5000&socketTimeoutMS=5000"
-        #   - name: gravitee_ratelimit_mongodb_uri
-        #     value: "mongodb://mongodb-gravitee:27017/gravitee?serverSelectionTimeoutMS=5000&connectTimeoutMS=5000&socketTimeoutMS=5000"
-        #   - name: gravitee_reporters_elasticsearch_endpoints_0
-        #     value: http://elasticsearch-logging:9200
-        # ports:
-        # - containerPort: 8082
-        # resources:
-        #   requests:
-        #     memory: "256Mi"
-        #     cpu: "250m"
-        #   limits:
-        #     memory: "1024Mi"
-        #     cpu: "500m"
+        resources:
+          requests:
+            memory: "125Mi"
+            cpu: "125m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
         volumeMounts:
+        - name: wazuh-agent-ossec-conf
+          mountPath: /opt/ossec-conf
+          readOnly: true
         - name: hostexport-varlog
           mountPath: /opt/var/log
         - name: varlibdockercontainers
@@ -64,6 +58,9 @@ spec:
           mountPath: /opt/hostexport/boot
           readOnly: true
       volumes:
+      - name: wazuh-agent-ossec-conf
+        configMap:
+          name: wazuh-agent-ossec-conf
       - name: hostexport-varlog
         hostPath:
           path: /var/log

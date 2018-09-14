@@ -18,5 +18,3 @@ WORKDIR /opt/wazuh-${VERSION}
 ADD preloaded-vars.conf /opt/wazuh-${VERSION}/etc/
 
 RUN ./install.sh
-
-ADD ./ossec.conf /var/ossec/etc/ossec.conf
