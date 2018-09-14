@@ -149,10 +149,12 @@ data:
         <location>/var/log/dpkg.log</location>
       </localfile>
 
+      <!--
       <localfile>
         <log_format>docker-logs</log_format>
         <location>/var/lib/docker/containers/*</location>
       </localfile>
+      -->
 
       <localfile>
         <log_format>command</log_format>
