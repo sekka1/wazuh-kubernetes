@@ -40,15 +40,51 @@ spec:
         #     memory: "1024Mi"
         #     cpu: "500m"
         volumeMounts:
-        - name: varlog
-          mountPath: /var/log
+        - name: hostexport-varlog
+          mountPath: /opt/var/log
         - name: varlibdockercontainers
           mountPath: /var/lib/docker/containers
           readOnly: true
+        - name: hostexport-etc
+          mountPath: /opt/hostexport/etc
+          readOnly: true
+        - name: hostexport-usr-bin
+          mountPath: /opt/hostexport/usr/bin
+          readOnly: true
+        - name: hostexport-usr-sbin
+          mountPath: /opt/hostexport/usr/sbin
+          readOnly: true
+        - name: hostexport-bin
+          mountPath: /opt/hostexport/bin
+          readOnly: true
+        - name: hostexport-sbin
+          mountPath: /opt/hostexport/sbin
+          readOnly: true
+        - name: hostexport-boot
+          mountPath: /opt/hostexport/boot
+          readOnly: true
       volumes:
-      - name: varlog
+      - name: hostexport-varlog
         hostPath:
           path: /var/log
       - name: varlibdockercontainers
         hostPath:
           path: /var/lib/docker/containers
+      - name: hostexport-etc
+        hostPath:
+          path: /etc
+      - name: hostexport-usr-bin
+        hostPath:
+          path: /usr/bin
+      - name: hostexport-usr-sbin
+        hostPath:
+          path: /usr/sbin
+      - name: hostexport-bin
+        hostPath:
+          path: /bin
+      - name: hostexport-sbin
+        hostPath:
+          path: /sbin
+      - name: hostexport-boot
+        hostPath:
+          path: /boot

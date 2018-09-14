@@ -4,7 +4,7 @@ ENV TZ Etc/GMT
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
-RUN apt-get install -y make systemd gcc libc6-dev curl policycoreutils-python-utils automake autoconf libtool wget
+RUN apt-get install -y make systemd gcc libc6-dev curl policycoreutils-python-utils automake autoconf libtool wget net-tools
 
 WORKDIR /opt
 
@@ -19,4 +19,4 @@ ADD preloaded-vars.conf /opt/wazuh-${VERSION}/etc/
 
 RUN ./install.sh
 
-RUN sed -i "s/<protocol>udp<\/protocol>/<protocol>tcp<\/protocol>/g" /var/ossec/etc/ossec.conf
+ADD ./ossec.conf /var/ossec/etc/ossec.conf
