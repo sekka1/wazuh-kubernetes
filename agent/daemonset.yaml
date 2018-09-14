@@ -21,7 +21,7 @@ spec:
         imagePullPolicy: Always
         command: ["/bin/bash"]
         args: ["-c",
-                "/var/ossec/bin/agent-auth -m wazuh-manager-master-0.wazuh-master.wazuh.svc.cluster.local -p 1515; /var/ossec/bin/ossec-control start; tail -f /var/ossec/logs/*.log;"
+                "/var/ossec/bin/agent-auth -m wazuh-manager -p 1515; /var/ossec/bin/ossec-control start; tail -f /var/ossec/logs/*.log;"
                 ]
         # env:
         #   - name: GRAVITEE_MANAGEMENT_MONGODB_URI
