@@ -1,0 +1,8 @@
+bases:
+- ../../../agent
+
+namespace: wazuh
+
+# patches:
+# - configmap-ossec-conf.yaml
+# - daemonset.yaml
