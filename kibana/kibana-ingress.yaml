@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kibana
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    # Setup Let's Encrypt Certificates
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+
+spec:
+  tls:
+  - hosts:
+    - kibana.example.com
+    secretName: kibana-tls
+  rules:
+  - host: kibana.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kibana
+          servicePort: 5601

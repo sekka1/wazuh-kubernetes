@@ -1,0 +1,6 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kibana
+  annotations:
+    nginx.ingress.kubernetes.io/whitelist-source-range: 192.30.252.0/22,1.1.1.1/32

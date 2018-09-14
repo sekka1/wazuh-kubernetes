@@ -3,3 +3,4 @@ resources:
 - kibana-svc.yaml
 - nginx-deploy.yaml
 - nginx-svc.yaml
+- kibana-ingress.yaml

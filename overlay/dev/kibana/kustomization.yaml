@@ -5,3 +5,12 @@ namespace: wazuh
 
 patches:
 - nginx-svc.yaml
+- kibana-ingress.yaml
+
+patchesJson6902:
+- target:
+    group: extensions
+    version: v1beta1
+    kind: Ingress
+    name: kibana
+  path: ingress_patch.json
