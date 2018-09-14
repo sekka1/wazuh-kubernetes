@@ -22,6 +22,7 @@ spec:
   type: LoadBalancer
   selector:
     app: wazuh-manager
+    wazuh-manager-role: master
   ports:
     - name: agents-events
       port: 1514

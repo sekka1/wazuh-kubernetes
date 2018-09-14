@@ -65,8 +65,12 @@ spec:
             - name: wazuh-manager-client
               mountPath: /etc/postfix
           ports:
-            - containerPort: 1514
-            - containerPort: 1515
+            - name: agents-events
+              containerPort: 1514
+              protocol: TCP
+            - name: agents-auth
+              protocol: TCP
+              containerPort: 1515
             - containerPort: 1516
             - containerPort: 55000
   volumeClaimTemplates:
