@@ -86,7 +86,7 @@ data:
         <auto_ignore>no</auto_ignore>
 
         <!-- Frequency that syscheck is executed default every 12 hours -->
-        <frequency>43200</frequency>
+        <frequency>3600</frequency>
 
         <!-- This option specifies whether syscheck will ignore files that change too often (more than 3 changes). -->
         <scan_on_start>yes</scan_on_start>

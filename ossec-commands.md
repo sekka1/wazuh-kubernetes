@@ -8,6 +8,10 @@ Wazuh: https://documentation.wazuh.com/current/getting-started/index.html
 
 Troubleshooting: https://ossec-docs.readthedocs.io/en/latest/faq/unexpected.html
 
+Other good links:
+* https://perezbox.com/2013/03/ossec-for-website-security-part-i/
+* https://blog.wazuh.com/configure-ossec-to-report-changes-in-the-content-of-a-text-file/
+
 # Logs
 
 location: /var/ossec/logs
