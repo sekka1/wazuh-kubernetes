@@ -1,5 +1,5 @@
 bases:
-- ../../../agent
+- ../../../agent/kubernetes
 
 namespace: wazuh
 

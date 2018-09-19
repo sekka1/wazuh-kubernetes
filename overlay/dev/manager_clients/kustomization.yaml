@@ -1,4 +1,0 @@
-bases:
-- ../../../manager_clients
-
-namespace: wazuh

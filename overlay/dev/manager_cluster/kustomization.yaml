@@ -1,5 +1,5 @@
 bases:
-- ../../../manager_master
+- ../../../manager_cluster
 
 namespace: wazuh
 

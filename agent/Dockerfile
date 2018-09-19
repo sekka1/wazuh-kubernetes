@@ -8,7 +8,7 @@ RUN apt-get install -y make systemd gcc libc6-dev curl policycoreutils-python-ut
 
 WORKDIR /opt
 
-ENV VERSION=3.2.4
+ENV VERSION=3.6.1
 
 RUN wget https://github.com/wazuh/wazuh/archive/v${VERSION}.tar.gz
 RUN tar -zxvf v${VERSION}.tar.gz

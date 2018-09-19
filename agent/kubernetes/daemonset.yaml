@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: wazuh-agent
-        image: garland/wazuh-agent:3.2.4
+        image: garland/wazuh-agent:3.6.1
         imagePullPolicy: Always
         command: ["/bin/bash"]
         args: ["-c",
